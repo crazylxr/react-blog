@@ -10,7 +10,7 @@ import { openDrawer, closeDrawer } from '@/redux/common/actions'
 
 import Tags from '../Tags'
 import Preview from './preview'
-import Loading from '@/components/helper/Loading'
+// import Loading from '@/components/helper/Loading'
 import BlogPagination from '@/components/web/pagination'
 
 const NoDataDesc = ({ keyword }) => (
@@ -22,7 +22,7 @@ const NoDataDesc = ({ keyword }) => (
 function Home(props) {
   const [list, setList] = useState([])
   const [total, setTotal] = useState(0)
-  const [loading, setLoading] = useState(false)
+  // const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     props.closeDrawer() // componentDidMount
@@ -34,7 +34,7 @@ function Home(props) {
   // 当地址栏发生变化
   useEffect(() => {
     const fetchList = ({ page, keyword }) => {
-      setLoading(true)
+      // setLoading(true)
       axios
         .get('/article/getList', { params: { page, pageSize: 10, title: keyword } })
         .then(res => {
@@ -46,10 +46,10 @@ function Home(props) {
           })
           setList(list)
           setTotal(res.count)
-          setLoading(false)
+          // setLoading(false)
         })
         .catch(e => {
-          setLoading(false)
+          // setLoading(false)
         })
     }
 
@@ -79,44 +79,49 @@ function Home(props) {
   const { page, keyword } = decodeQuery(props.location.search)
   return (
     <div className="content-inner-wrapper home">
-      {loading ? (
-        <Loading />
-      ) : (
         <Fragment>
-          <ul className="ul-list">
-            {list.map(item => (
-              <li key={item.id} className="ul-list-item">
-                <Divider orientation="left">
-                  <span className="title" onClick={() => jumpTo(item.id)}>
-                    {item.title}
-                  </span>
-                  <span className="create-time">{item.createdAt.slice(0, 10)}</span>
-                </Divider>
+        <ul className="ul-list">
+          {list.map(item => (
+            <li key={item.id} className="ul-list-item">
+              <span className="post-meta">
+                <span className="date">{item.createdAt.slice(0, 10)}</span>
+                <span className="categories">，
+                    {
+                    item.categories.map((categorie, index) => {
+                      return <span key={index}>{categorie.name}</span>
+                    })
+                  }
+                </span>
+              </span>
+              <h3 className="title" onClick={() => jumpTo(item.id)}>
+                {item.title}
+              </h3>
+              {/* <span className="create-time">{item.createdAt.slice(0, 10)}</span> */}
 
-                <div
+              {/* <div
                   onClick={() => jumpTo(item.id)}
                   className="article-detail description"
                   dangerouslySetInnerHTML={{ __html: item.description }}
-                />
+                /> */}
 
-                <div className="list-item-action">
+              {/* <div className="list-item-action">
                   <Icon type="message" style={{ marginRight: 7 }} />
                   {getCommentsCount(item.comments)}
                   <Tags type="tags" list={item.tags} />
                   <Tags type="categories" list={item.categories} />
-                </div>
-              </li>
-            ))}
-          </ul>
-          {list.length > 0 ? (
-            <Fragment>
-              {list.length < total && (
-                <BlogPagination current={parseInt(page) || 1} onChange={handlePageChange} total={total} />
-              )}
+                </div> */}
+            </li>
+          ))}
+        </ul>
+        {list.length > 0 ? (
+          <Fragment>
+            {list.length < total && (
+              <BlogPagination current={parseInt(page) || 1} onChange={handlePageChange} total={total} />
+            )}
 
-              {props.windowWidth > 1300 ? (
-                <Preview list={list} />
-              ) : (
+            {props.windowWidth > 1300 ? (
+              <Preview list={list} />
+            ) : (
                 <Fragment>
                   <div className="drawer-btn" onClick={props.openDrawer}>
                     <Icon type="menu-o" className="nav-phone-icon" />
@@ -131,14 +136,13 @@ function Home(props) {
                   </Drawer>
                 </Fragment>
               )}
-            </Fragment>
-          ) : (
+          </Fragment>
+        ) : (
             <div className="no-data">
               <Empty description={<NoDataDesc keyword={keyword} />} />
             </div>
           )}
-        </Fragment>
-      )}
+      </Fragment>
     </div>
   )
 }

@@ -1,17 +1,21 @@
 .app-container {
-  background: #fff;
+  background-color: #f7f7f7;
+  font-family: Baskerville,Times New Roman,"Liberation Serif",STFangsong,FangSong,FangSong_GB2312,CWTEX-F,serif;
+
   .main-wrapper {
-    background: #fff;
+    display: flex;
+    justify-content: center;
     padding: 40px 0 0;
     position: relative;
+    margin-bottom: 100px;
 
     .content-wrapper {
-      height: calc(100vh - 64px - 40px);
-      overflow: auto;
+      background: #fff;
+      padding: 50px;
       -webkit-overflow-scrolling: touch;
+      border-radius: 5px;
       .content-inner-wrapper {
         position: relative;
-        padding: 0 300px 40px 40px;
         .loading {
           position: absolute;
           top: 50%;
@@ -26,4 +30,8 @@
       }
     }
   }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Baskerville,Georgia,"Liberation Serif",Kaiti SC,STKaiti,AR PL UKai CN,AR PL UKai HK,AR PL UKai TW,AR PL UKai TW MBE,AR PL KaitiM GB,KaiTi,KaiTi_GB2312,DFKai-SB,TW-Kai,serif;
 }

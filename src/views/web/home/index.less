@@ -2,44 +2,40 @@
   .ul-list {
     width: 100%;
     .ul-list-item {
-      // background: #f9f9f9;
       position: relative;
-      border: 1px solid #ebedf0;
-      padding: 16px 24px;
-      margin-bottom: 10px;
       transition: all 0.2s linear;
-      &:hover {
-        background: #effbff;
-        box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.1);
-        transform: translate3d(0, -5px 0);
-      }
+      margin-bottom: 2em;
       .title {
-        color: #394d69;
-        font-size: 1.4rem;
-        font-weight: 600;
-        line-height: 1.2;
+        position: relative;
         cursor: pointer;
-        &:hover {
-          color: #48b2ff;
-        }
+        font-weight: normal;
+        text-decoration: none;
+        color: #1f1f1f;
+        font-size: 20px;
+        font-family: Baskerville,Georgia,"Liberation Serif",Kaiti SC,STKaiti,AR PL UKai CN,AR PL UKai HK,AR PL UKai TW,AR PL UKai TW MBE,AR PL KaitiM GB,KaiTi,KaiTi_GB2312,DFKai-SB,TW-Kai,serif;
       }
-      .description {
-        // padding: 15px 10px;
-        cursor: pointer;
-        max-height: 260px;
-        overflow: hidden;
+      .title::before {
+        content: " ";
+        position: absolute;
+        top: 10px;
+        left: -20px;
+        width: 4px;
+        height: 4px;
+        border-radius: 2px;
+        background: #1f1f1f;
+        transition: all .2s cubic-bezier(.4,0,1,1);
       }
-      .create-time {
-        font-size: 0.5em;
-        padding-left: 20px;
+      .title:hover::before {
+        width: 10px;
+        left: -30px;
       }
-      .list-item-action {
-        vertical-align: middle;
-        margin-top: 10px;
-        color: rgba(0, 0, 0, 0.45);
-        a {
-          color: inherit;
-        }
+
+      .post-meta {
+        display: block;
+        color: #bbb;
+        font-size: 12px;
+        font-style: italic;
+        font-weight: lighter;
       }
     }
   }

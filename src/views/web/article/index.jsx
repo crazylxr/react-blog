@@ -47,9 +47,6 @@ function ArticleDetail(props) {
   const articleId = parseInt(props.match.params.id)
   return (
     <div className="content-inner-wrapper article">
-      {loading ? (
-        <Loading />
-      ) : (
         <React.Fragment>
           <div className="post-header">
             <h1 className="post-title">{title}</h1>
@@ -92,7 +89,6 @@ function ArticleDetail(props) {
 
           <Comment articleId={articleId} commentList={commentList} setCommentList={setCommentList} />
         </React.Fragment>
-      )}
     </div>
   )
 }

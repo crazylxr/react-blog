@@ -58,7 +58,7 @@ function Archives(props) {
               </Timeline.Item>
 
               {d.map(item => (
-                <Timeline.Item key={item.id}>
+                <Timeline.Item key={item.id} color="#c5d4e0">
                   <span style={{ fontSize: '13px', marginRight: '16px' }}>{item.createdAt.slice(5, 10)}</span>
                   <Link to={`/article/${item.id}`}>{item.title}</Link>
                 </Timeline.Item>

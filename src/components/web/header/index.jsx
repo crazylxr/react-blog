@@ -34,7 +34,7 @@ const BlogHeader = () => {
   const responsiveLeft = { xxl: 4, xl: 5, lg: 5, sm: 4, xs: 24 };
   const responsiveRight = { xxl: 20, xl: 16, lg: 16, sm: 20, xs: 0 };
   const infoLeft = { xl: 16, lg: 16 };
-  const infoRight = { xl: 6, lg: 6 };
+  const infoRight = { xl: 3, lg: 3 };
   const info = { xl: 16, lg: 16 };
 
   return (

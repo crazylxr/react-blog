@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import './index.less'
 import { connect } from 'react-redux'
-import avatar from '@/assets/author_avatar.png'
 import { Link } from 'react-router-dom'
 import { Divider, Tag, Icon } from 'antd'
+
+const avatar = 'http://www.gravatar.com/avatar/5bc51d6f7bda04fb5e57f83ea1d7387e?s=100'
 
 function random(colorList) {
   const len = colorList.length

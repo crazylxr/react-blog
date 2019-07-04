@@ -4,7 +4,7 @@ import './index.less'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 
-import { random, getCommentsCount } from '@/lib'
+import { random, getCommentsCount } from '../../../../lib'
 import { Table, Divider, Tag, Modal, message, Badge, Button } from 'antd'
 import QueryForm from './queryForm'
 import moment from 'moment'

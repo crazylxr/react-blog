@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from 'react';
 
 import { connect } from 'react-redux';
-import { register, logout } from '@/redux/user/actions';
-import { openAuthModal } from '@/redux/common/actions';
+import { register, logout } from '../../../redux/user/actions';
+import { openAuthModal } from '../../../redux/common/actions';
 
 import { Icon, Button, Dropdown, Avatar, Menu } from 'antd';
 import AuthModal from '../authModal';

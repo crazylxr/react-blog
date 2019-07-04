@@ -1,13 +1,13 @@
 import React, { Component, useEffect, useState } from 'react'
 import './index.less'
-import AuthorAvatar from '@/components/web/AuthorAvatar'
+import AuthorAvatar from '../../../components/web/AuthorAvatar'
 import { connect } from 'react-redux'
-import { generateColorMap } from '@/redux/common/actions'
+import { generateColorMap } from '../../../redux/common/actions'
 
 import { Divider, Rate, Icon } from 'antd'
 
-import Comment from '@/components/web/comment'
-import axios from '@/lib/axios'
+import Comment from '../../../components/web/comment'
+import axios from '../../../lib/axios'
 
 function About(props) {
   const [commentList, setCommentList] = useState([])

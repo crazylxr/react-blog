@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { NavLink, withRouter } from 'react-router-dom'
 import { Menu, Icon } from 'antd'
-import routes from '@/views/admin/routes'
+import routes from '../../../views/admin/routes'
 
 const SubMenu = Menu.SubMenu
 

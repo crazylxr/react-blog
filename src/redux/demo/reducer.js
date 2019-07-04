@@ -1,4 +1,4 @@
-import * as constants from '@/redux/constants'
+import * as constants from '../constants'
 
 // state
 const defaultState = {

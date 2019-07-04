@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 
 import { Link } from 'react-router-dom'
 import { Timeline, Pagination, Spin } from 'antd'
-import BlogPagination from '@/components/web/pagination'
+import BlogPagination from '../../../components/web/pagination'
 
 const TimeLineList = ({ list, name, type }) => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react'
 import './index.less'
-import greenMan from '@/assets/404.png'
+import greenMan from '../../assets/404.png'
 import { Link } from 'react-router-dom'
 import { Icon } from 'antd'
 

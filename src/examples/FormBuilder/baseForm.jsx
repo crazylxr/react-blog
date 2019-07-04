@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Button, DatePicker, Form, Input, InputNumber, Select, Icon } from 'antd'
-import FormBuilder from '@/components/helper/FormBuilder'
+import FormBuilder from '../../components/helper/FormBuilder'
 const Option = Select.Option
 
 // gender - 性别选择下拉框

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { SpinLoading } from '@/components/helper/Loading'
+import { SpinLoading } from './Loading'
 
 /**
  * 使用 webpack 的 import 方法实现动态加载组件！dynamic import

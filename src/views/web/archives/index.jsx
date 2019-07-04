@@ -2,10 +2,10 @@ import React, { Component, Fragment, useState, useEffect } from 'react'
 import './index.less'
 import { Link } from 'react-router-dom'
 
-import { groupBy } from '@/lib'
+import { groupBy } from '../../../lib'
 import { Timeline, Icon, Pagination, Spin } from 'antd'
-import BlogPagination from '@/components/web/pagination'
-import axios from '@/lib/axios'
+import BlogPagination from '../../../components/web/pagination'
+import axios from '../../../lib/axios'
 
 function Archives(props) {
   const [list, setList] = useState([])

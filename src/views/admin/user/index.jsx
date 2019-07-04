@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { getCommentsCount } from '@/lib'
+import { getCommentsCount } from '../../../lib'
 import moment from 'moment'
 import QueryForm from './queryForm'
 import { Table, Button, Modal, message, Badge } from 'antd'

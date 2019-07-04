@@ -1,5 +1,5 @@
-import Layout from '@/components/web/layout'
-import PageNotFound from '@/components/404'
+import Layout from '../../components/web/layout'
+import PageNotFound from '../../components/404'
 import Home from './home'
 import Article from './article'
 import Archives from './archives'

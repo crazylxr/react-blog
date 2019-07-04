@@ -5,8 +5,8 @@ import { connect } from 'react-redux'
 
 import { withRouter } from 'react-router-dom'
 
-import AuthorAvatar from '@/components/web/AuthorAvatar'
-import { logout } from '@/redux/user/actions'
+import AuthorAvatar from '../../../components/web/AuthorAvatar'
+import { logout } from '../../../redux/user/actions'
 import { Button, Icon, Dropdown, Menu } from 'antd'
 
 const DropdownMenu = () => (

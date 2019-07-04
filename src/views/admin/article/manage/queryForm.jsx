@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 import { Button, Form, Input, Select, DatePicker, Checkbox, Radio } from 'antd'
-import FormBuilder from '@/components/helper/FormBuilder'
+import FormBuilder from '../../../../components/helper/FormBuilder'
 import { connect } from 'react-redux'
 import moment from 'moment'
 

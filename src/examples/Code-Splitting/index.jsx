@@ -1,5 +1,5 @@
 import React, { Component, Suspense, lazy } from 'react'
-import Loading from '@/components/helper/Loading'
+import Loading from '../../components/helper/Loading'
 
 const WebpackDemo = lazy(() => import('./demo'))
 

@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Layout } from 'antd'
-import SideBarNav from '@/components/admin/sider'
-import AdminHeader from '@/components/admin/header'
+import SideBarNav from '../../../components/admin/sider'
+import AdminHeader from '../../../components/admin/header'
 
 const { Sider, Header, Content, Footer } = Layout
 

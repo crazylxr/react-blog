@@ -1,4 +1,4 @@
-import * as constants from '@/redux/constants'
+import * as constants from '../constants'
 import jwtDecode from 'jwt-decode'
 
 // state

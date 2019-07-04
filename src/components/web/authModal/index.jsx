@@ -4,9 +4,9 @@ import './index.less'
 import { connect } from 'react-redux'
 
 import { Modal, Input, Icon, message, Button, Form, Alert, Checkbox } from 'antd'
-import { login, register, updateUser } from '@/redux/user/actions'
-import { closeAuthModal, openAuthModal } from '@/redux/common/actions'
-import FormBuilder from '@/components/helper/FormBuilder'
+import { login, register, updateUser } from '../../../redux/user/actions'
+import { closeAuthModal, openAuthModal } from '../../../redux/common/actions'
+import FormBuilder from '../../../components/helper/FormBuilder'
 
 const CheckboxGroup = Checkbox.Group
 

@@ -1,5 +1,5 @@
-import * as constants from '@/redux/constants'
-import axios from '@/lib/axios'
+import * as constants from '../constants'
+import axios from '../../lib/axios'
 import { message } from 'antd'
 
 export const login = params => {

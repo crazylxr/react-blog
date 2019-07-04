@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { Button, message } from 'antd'
-import { logout } from '@/redux/demo/actions'
+import { logout } from '../../redux/demo/actions'
 
 @withRouter
 @connect(

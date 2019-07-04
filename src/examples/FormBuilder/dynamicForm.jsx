@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Button, Form, Input, Select } from 'antd'
-import FormBuilder from '@/components/helper/FormBuilder'
+import FormBuilder from '../../components/helper/FormBuilder'
 const Option = Select.Option
 
 const formMeta = {

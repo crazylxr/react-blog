@@ -1,15 +1,15 @@
 import React, { Component, Fragment, useState, useEffect } from 'react'
 import './index.less'
 import { connect } from 'react-redux'
-import { translateMarkdown, getCommentsCount } from '@/lib/index'
-import { openDrawer, closeDrawer, generateColorMap } from '@/redux/common/actions'
+import { translateMarkdown, getCommentsCount } from '../../../lib/index'
+import { openDrawer, closeDrawer, generateColorMap } from '../../../redux/common/actions'
 
 import Navigation from './navigation'
-import Loading from '@/components/helper/Loading'
+import Loading from '../../../components/helper/Loading'
 import Tags from '../Tags'
-import Comment from '@/components/web/comment'
+import Comment from '../../../components/web/comment'
 import { Drawer, Icon, Divider } from 'antd'
-import axios from '@/lib/axios'
+import axios from '../../../lib/axios'
 
 function ArticleDetail(props) {
   const [title, setTitle] = useState('')

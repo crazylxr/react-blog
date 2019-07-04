@@ -1,17 +1,17 @@
 import React, { Component, Fragment, useEffect, useState } from 'react'
 import './index.less'
-import axios from '@/lib/axios'
+import axios from '../../../lib/axios'
 
 import { connect } from 'react-redux'
 
 import { Icon, Divider, Empty, Drawer } from 'antd'
-import { translateMarkdown, decodeQuery, getCommentsCount } from '@/lib'
-import { openDrawer, closeDrawer } from '@/redux/common/actions'
+import { translateMarkdown, decodeQuery, getCommentsCount } from '../../../lib'
+import { openDrawer, closeDrawer } from '../../../redux/common/actions'
 
 import Tags from '../Tags'
 import Preview from './preview'
 // import Loading from '@/components/helper/Loading'
-import BlogPagination from '@/components/web/pagination'
+import BlogPagination from '../../../components/web/pagination'
 
 const NoDataDesc = ({ keyword }) => (
   <Fragment>

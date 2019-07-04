@@ -1,13 +1,13 @@
 import React, { Component, Fragment, useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import './index.less'
-import axios from '@/lib/axios'
+import axios from '../../../lib/axios'
 
 import { connect } from 'react-redux'
-import AuthorAvatar from '@/components/web/AuthorAvatar'
-import { getCommentsCount } from '@/lib'
-import { openAuthModal } from '@/redux/common/actions'
-import { logout } from '@/redux/user/actions'
+import AuthorAvatar from '../../../components/web/AuthorAvatar'
+import { getCommentsCount } from '../../..//lib'
+import { openAuthModal } from '../../../redux/common/actions'
+import { logout } from '../../../redux/user/actions'
 
 import { Comment, Avatar, Form, Button, Divider, Input, Icon, Menu, Dropdown, message, Modal } from 'antd'
 import CommentList from './list'

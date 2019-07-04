@@ -1,5 +1,5 @@
-import * as constants from '@/redux/constants'
-import { groupBy, random } from '@/lib'
+import * as constants from '../../redux/constants'
+import { groupBy, random } from '../../lib'
 
 // state
 const defaultState = {

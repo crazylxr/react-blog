@@ -1,5 +1,5 @@
-import lazy from '@/components/helper/lazy'
-const Login = lazy(() => import('@/views/admin/login'))
+import lazy from '../components/helper/lazy'
+const Login = lazy(() => import('../views/admin/login'))
 
 export default {
   path: '',

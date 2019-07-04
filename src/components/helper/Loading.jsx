@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Spin, Icon } from 'antd'
-import loadingPic from '@/assets/loading.gif'
+import loadingPic from '../../assets/loading.gif'
 
 const loadingRoot = document.getElementById('component-loading')
 const antIcon = <Icon type="loading" style={{ fontSize: 24 }} spin />

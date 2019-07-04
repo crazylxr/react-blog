@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
-import routes from '@/routes/config'
+import routes from './routes/config'
 import { connect } from 'react-redux'
-import { getTags, getCategories } from '@/redux/article/actions'
-import { getWindowWidth } from '@/redux/common/actions'
+import { getTags, getCategories } from './redux/article/actions'
+import { getWindowWidth } from './redux/common/actions'
 
 function Root(props) {
   // 初始化数据 类似 componentDidMount

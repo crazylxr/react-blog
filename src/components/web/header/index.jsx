@@ -23,11 +23,11 @@ const navList = [
    *   title: '分类',
    *   link: '/categories',
    * }, */
-  {
-    icon: 'user',
-    title: '关于',
-    link: '/about',
-  },
+  /* {
+   *   icon: 'user',
+   *   title: '关于',
+   *   link: '/about',
+   * }, */
   {
     title: '生活',
     link: '/categories/life',

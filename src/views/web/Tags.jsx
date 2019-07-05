@@ -3,11 +3,13 @@ import PropTypes from 'prop-types'
 import { withRouter, Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { Icon, Tag, Divider } from 'antd'
+import TagCloud from 'react3dtagcloud'
 
 const mapStateToProps = state => ({})
 
 @connect(state => ({
-  colorList: state.common.colorList
+  colorList: state.common.colorList,
+  tagList: state.article.tagList
 }))
 @withRouter
 class Tags extends Component {
@@ -22,21 +24,13 @@ class Tags extends Component {
   }
 
   render() {
-    const { type, list, colorList } = this.props
+    const { type, tagList } = this.props
+    const tags = tagList.map(item => item.name)
+
     return (
-      <Fragment>
-        <Divider type="vertical" />
-        {type === 'tags' ? (
-          <i className="iconfont icon-tags" style={{ marginRight: 7, verticalAlign: 'middle' }} />
-        ) : (
-          <Icon type="folder" style={{ marginRight: 7 }} />
-        )}
-        {list.map((item, i) => (
-          <Tag color={type === 'tags' ? colorList[i] : '#2db7f5'} key={item.name}>
-            <Link to={`/${type}/${item.name}`}>{item.name}</Link>
-          </Tag>
-        ))}
-      </Fragment>
+		  <div style={{ width: '100%', height: '1000px' }}>
+		    <TagCloud tagName={ tags } url="tags" radius={100}></TagCloud>
+		  </div>
     )
   }
 }

@@ -28,6 +28,22 @@ const navList = [
     title: '关于',
     link: '/about',
   },
+  {
+    title: '生活',
+    link: '/life',
+  },
+  {
+    title: '技术',
+    link: '/technology'
+  },
+  {
+    title: '思考',
+    link: '/think'
+  },
+  {
+    title: '标签',
+    link: '/tags'
+  }
 ];
 
 const BlogHeader = () => {

@@ -6,6 +6,7 @@ import Archives from './archives'
 import Categories from './categories'
 import List from './list'
 import About from './about'
+import Tags from './Tags'
 
 export default {
   path: '/',
@@ -17,6 +18,7 @@ export default {
     { path: 'article/:id', component: Article },
     { path: 'categories', component: Categories },
     { path: 'categories/:name', component: List },
+    { path: 'tags', component: Tags },
     { path: 'tags/:name', component: List },
     { path: 'about', component: About },
     { path: '*', component: PageNotFound }

@@ -18,11 +18,11 @@ const navList = [
     title: '归档',
     link: '/archives',
   },
-  {
-    icon: 'folder',
-    title: '分类',
-    link: '/categories',
-  },
+  /* {
+   *   icon: 'folder',
+   *   title: '分类',
+   *   link: '/categories',
+   * }, */
   {
     icon: 'user',
     title: '关于',
@@ -30,15 +30,15 @@ const navList = [
   },
   {
     title: '生活',
-    link: '/life',
+    link: '/categories/life',
   },
   {
     title: '技术',
-    link: '/technology'
+    link: '/categories/technology'
   },
   {
     title: '思考',
-    link: '/think'
+    link: '/categories/think'
   },
   {
     title: '标签',

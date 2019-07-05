@@ -6,7 +6,7 @@ import { openDrawer, closeDrawer, generateColorMap } from '../../../redux/common
 
 import Navigation from './navigation'
 import Loading from '../../../components/helper/Loading'
-import Tags from '../Tags'
+import Tags from '../../../components/web/tags'
 import Comment from '../../../components/web/comment'
 import { Drawer, Icon, Divider } from 'antd'
 import axios from '../../../lib/axios'

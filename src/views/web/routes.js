@@ -6,7 +6,7 @@ import Archives from './archives'
 import Categories from './categories'
 import List from './list'
 import About from './about'
-import Tags from './Tags'
+import Tags from './Tags.jsx'
 
 export default {
   path: '/',

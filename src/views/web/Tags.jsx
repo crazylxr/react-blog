@@ -11,6 +11,7 @@ const mapStateToProps = state => ({})
   colorList: state.common.colorList,
   tagList: state.article.tagList
 }))
+
 @withRouter
 class Tags extends Component {
   static propTypes = {
@@ -28,9 +29,9 @@ class Tags extends Component {
     const tags = tagList.map(item => item.name)
 
     return (
-		  <div style={{ width: '100%', height: '1000px' }}>
-		    <TagCloud tagName={ tags } url="tags" radius={100}></TagCloud>
-		  </div>
+      <div style={{ width: '100%', height: '1000px' }}>
+        <TagCloud tagName={ tags } url="tags" radius={100}></TagCloud>
+      </div>
     )
   }
 }

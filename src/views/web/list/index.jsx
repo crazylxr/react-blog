@@ -10,7 +10,7 @@ const TimeLineList = ({ list, name, type }) => {
   return (
     <div className="timeline">
       <Timeline>
-        <Timeline.Item>
+        <Timeline.Item >
           <h1 className="list-title">
             {name}
             <small className="type-name"> {type === 'categories' ? 'Category' : 'Tag'}</small>
@@ -18,7 +18,7 @@ const TimeLineList = ({ list, name, type }) => {
           <br />
         </Timeline.Item>
         {list.map(item => (
-          <Timeline.Item key={item.id}>
+          <Timeline.Item key={item.id} color="#c5d4e0">
             <span style={{ fontSize: '13px', marginRight: '16px' }}>{item.createdAt.slice(5, 10)}</span>
             <Link to={`/article/${item.id}`}>{item.title}</Link>
           </Timeline.Item>

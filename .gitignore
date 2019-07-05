@@ -5,16 +5,17 @@ node_modules
 /.pnp
 .pnp.js
 
-.cache
-dist
 
 # testing
 /coverage
 
 # production
 /build
+/dist
 
 # misc
+.cache
+dist
 .DS_Store
 .env.local
 .env.development.local

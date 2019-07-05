@@ -39,40 +39,44 @@ class UserInfo extends Component {
     return (
       <div id="header-userInfo">
         {username ? (
-          <Fragment>
-            <Avatar
-              className="user-avatar"
-              src="http://www.gravatar.com/avatar/5bc51d6f7bda04fb5e57f83ea1d7387e?s=100"
-              size={100}
-            />
-            <ul className="social-media-list" >
-              <li><Icon type="github" /></li>
-              <li> <Icon type="twitter" /></li>
-              <li><Icon type="weibo" /></li>
-              <li><Icon type="wechat" /></li>
-              <li><Icon type="zhihu" /></li>
-            </ul>
-          </Fragment>
+           <Fragment>
+             <Avatar
+               className="user-avatar"
+               src="http://www.gravatar.com/avatar/5bc51d6f7bda04fb5e57f83ea1d7387e?s=100"
+               size={100}
+             />
+             <ul className="social-media-list" >
+               <li><a target="_blank" href="https://github.com/crazylxr"><Icon type="github" /></a></li>
+               <li><a href="https://twitter.com/Tao_Weng"><Icon type="twitter" /></a></li>
+               <li><Icon type="weibo" /></li>
+               <li><Icon type="wechat" /></li>
+               <li>
+                 <a target="_blank" href="https://www.zhihu.com/people/crazylxr/activities">
+                   <Icon type="zhihu"/>
+                 </a>
+               </li>
+             </ul>
+           </Fragment>
         ) : (
-          <Fragment>
-            <Button
-              ghost
-              type="primary"
-              size="small"
-              style={{ marginRight: 20 }}
-              onClick={() => this.props.openAuthModal('login')}
-            >
-              登录
-            </Button>
-            <Button
-              ghost
-              type="danger"
-              size="small"
-              onClick={() => this.props.openAuthModal('register')}
-            >
-              注册
-            </Button>
-          </Fragment>
+           <Fragment>
+             <Button
+               ghost
+               type="primary"
+               size="small"
+               style={{ marginRight: 20 }}
+               onClick={() => this.props.openAuthModal('login')}
+             >
+               登录
+             </Button>
+             <Button
+               ghost
+               type="danger"
+               size="small"
+               onClick={() => this.props.openAuthModal('register')}
+             >
+               注册
+             </Button>
+           </Fragment>
         )}
 
         <AuthModal />

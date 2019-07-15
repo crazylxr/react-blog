@@ -30,3 +30,7 @@ http://www.gravatar.com/avatar/哈希值
 ```
 见这篇文章：[Gravatar开发者手册
 ](https://cloud.tencent.com/developer/article/1025069)
+
+### node 增加模板引擎
+
+部署的时候，现在前后端要分别部署，比较麻烦，所以直接起一个

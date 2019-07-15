@@ -1,0 +1,2 @@
+.login-container{display:flex;flex-direction:column;height:100vh;overflow:auto;background-repeat:no-repeat;background-position:center 110px;background-size:100%;background-color:#f0f2f5;align-items:center;justify-content:center}.login-container .login-form{width:368px;margin-top:-200px}.login-container .login-form .App-logo{animation:App-logo-spin 20s linear infinite}@keyframes App-logo-spin{0%{transform:rotate(0deg)}to{transform:rotate(1turn)}}
+/*# sourceMappingURL=/login.0695b7eb.css.map */

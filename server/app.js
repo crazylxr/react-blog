@@ -2,6 +2,9 @@ const Koa = require('koa')
 const bodyParser = require('koa-bodyparser')
 const cors = require('koa2-cors')
 const logger = require('koa-logger')
+const path = require('path')
+const views = require('koa-views')
+const static = require('koa-static')
 const errorHandle = require('./middlewares/errorHandle')
 const checkToken = require('./middlewares/checkToken')
 
@@ -9,6 +12,22 @@ const router = require('./router')
 const db = require('./models')
 
 const app = new Koa()
+
+// 静态资源目录对于相对入口文件index.js的路径
+const staticPath = './public'
+
+app.use(static(
+  path.join( __dirname,  staticPath)
+))
+
+// 加载模板引擎
+app.use(views(path.join(__dirname, './views'), {
+  extension: 'ejs'
+}))
+
+app.use( async ( ctx ) => {
+  await ctx.render('index', {})
+})
 
 app
   .use(cors())

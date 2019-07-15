@@ -8,10 +8,19 @@ const static = require('koa-static')
 const errorHandle = require('./middlewares/errorHandle')
 const checkToken = require('./middlewares/checkToken')
 
+const compress = require('koa-compress');
 const router = require('./router')
 const db = require('./models')
 
 const app = new Koa()
+
+
+app.use(
+  compress({
+    threshold: 1024, // 阀值，当数据超过1kb的时候，可以压缩
+    flush: require('zlib').Z_SYNC_FLUSH // zlib是node的压缩模块
+  })
+)
 
 // 静态资源目录对于相对入口文件index.js的路径
 const staticPath = './public'
@@ -26,6 +35,8 @@ app.use(views(path.join(__dirname, './views'), {
 }))
 
 app.use( async ( ctx ) => {
+  ctx.compress = true
+
   await ctx.render('index', {})
 })
 
